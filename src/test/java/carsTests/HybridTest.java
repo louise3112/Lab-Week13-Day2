@@ -2,9 +2,9 @@ package carsTests;
 
 import cars.Hybrid;
 import cars.Size;
-import components.Engine;
-import components.Tyre;
-import components.Windscreen;
+import carParts.Engine;
+import carParts.Battery;
+import carParts.FuelTank;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,16 +14,16 @@ public class HybridTest {
 
     private Hybrid hybridCar;
     private Size size;
-    private Windscreen windscreen;
+    private FuelTank fuelTank;
     private Engine engine;
-    private Tyre tyre;
+    private Battery battery;
 
     @Before
     public void before() {
         engine = new Engine(500.00, 1);
-        windscreen = new Windscreen(200.00, 0);
-        tyre = new Tyre(80.00, 2);
-        hybridCar = new Hybrid(3000.00, "BMW", size.FAMILY, "silver", engine, windscreen, tyre);
+        fuelTank = new FuelTank(200.00, 0);
+        battery = new Battery(80.00, 2);
+        hybridCar = new Hybrid(3000.00, "BMW", size.FAMILY, "silver", engine, fuelTank, battery);
     }
 
     @Test

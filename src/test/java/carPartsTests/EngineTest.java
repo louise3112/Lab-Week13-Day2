@@ -1,7 +1,6 @@
-package componentsTests;
+package carPartsTests;
 
-import cars.Size;
-import components.Engine;
+import carParts.Engine;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,17 +9,11 @@ import static org.junit.Assert.assertEquals;
 public class EngineTest {
 
     private Engine engine;
-    // private Size size;
 
     @Before
     public void before() {
         engine = new Engine(900.00, 0);
     }
-
-//    @Test
-//    public void canGetPriceBySize() {
-//        assertEquals(900.00, engine.getPriceBySize(size.FAMILY), 0.0);
-//    }
 
     @Test
     public void canGetValue() {
@@ -50,13 +43,8 @@ public class EngineTest {
     }
 
 //    @Test
-//    public void canGetBatterySurcharge() {
-//        assertEquals(1.2, engine.getBatterySurcharge(), 0.0);
+//    public void canGetPriceBySize() {
+//        assertEquals(900.00, engine.getPriceBySize(size.FAMILY), 0.0);
 //    }
-//
-//    @Test
-//    public void canSetPrices() {
-//        engine.setPrices();
-//        assertEquals(600.00, engine.getPriceBySize(size.COMPACT), 0.0);
-//    }
+
 }

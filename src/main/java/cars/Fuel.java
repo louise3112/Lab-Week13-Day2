@@ -1,14 +1,14 @@
 package cars;
 
-import components.Engine;
-import components.Tyre;
-import components.Windscreen;
+import carParts.Engine;
+import carParts.Battery;
+import carParts.FuelTank;
 
 public class Fuel extends Car {
 
-    public Fuel (double value, String make, Size size, String colour, Engine engine, Windscreen windscreen, Tyre tyre) {
-        super(value, make, size, colour, engine, windscreen, tyre);
+    public Fuel (double value, String make, Size size, String colour, Engine engine, FuelTank fuelTank) {
+        super(value, make, size, colour, engine);
+        this.addCarPart("fuelTank", fuelTank);
     }
-
 
 }

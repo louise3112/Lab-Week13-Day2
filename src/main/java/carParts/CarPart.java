@@ -1,10 +1,10 @@
-package components;
+package carParts;
 
-public abstract class Component implements IFix {
+public abstract class CarPart implements IFix {
     private double value;
     private int damage;
 
-    public Component(double value, int damage) {
+    public CarPart(double value, int damage) {
         this.value = value;
         this.damage = damage;
     }

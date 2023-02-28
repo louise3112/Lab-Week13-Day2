@@ -1,19 +1,16 @@
-package components;
+package carParts;
 
-public class Tyre extends Component {
+public class FuelTank extends CarPart {
 
     private int maxDamage;
 
-    public Tyre (double value, int damage) {
+    public FuelTank(double value, int damage) {
         super(value, damage);
         this.maxDamage = 3;
     }
 
-
     public int getMaxDamage() {
         return this.maxDamage;
     }
-
-
 
 }

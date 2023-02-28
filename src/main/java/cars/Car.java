@@ -1,11 +1,13 @@
 package cars;
 
-import components.Component;
-import components.Engine;
-import components.Tyre;
-import components.Windscreen;
+import carParts.CarPart;
+import carParts.Engine;
+import carParts.Battery;
+import carParts.FuelTank;
 
+import javax.smartcardio.Card;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public abstract class Car {
 
@@ -14,20 +16,16 @@ public abstract class Car {
     private Size size;
     private String colour;
 
-    // private HashMap<IFix, Integer> carParts;
-    private ArrayList<Component> carParts;
+    private HashMap<String, CarPart> carParts;
 
-    public Car (double value, String make, Size size, String colour, Engine engine, Windscreen windscreen, Tyre tyre) {
+    public Car (double value, String make, Size size, String colour, Engine engine) {
         this.value = value;
         this.make = make;
         this.size = size;
         this.colour = colour;
-        // this.carParts = new HashMap<>();
-        // this.carParts.put(windscreenDamage);
-        this.carParts = new ArrayList<>();
-        this.carParts.add(engine);
-        this.carParts.add(windscreen);
-        this.carParts.add(tyre);
+
+        this.carParts = new HashMap<>();
+        this.carParts.put("engine", engine);
     }
 
     public double getValue() {
@@ -46,12 +44,17 @@ public abstract class Car {
         return this.colour;
     }
 
-    public ArrayList<Component> getCarParts() {
+    public HashMap<String, CarPart> getCarParts() {
         return this.carParts;
     }
 
-//    public void fix() {
-//        this.ma
-//    }
+    public void addCarPart(String description, CarPart newPart) {
+        this.carParts.put(description, newPart);
+    }
+
+    public CarPart getCarPartByType(String type) {
+        return this.carParts.get(type);
+    }
+
 
 }

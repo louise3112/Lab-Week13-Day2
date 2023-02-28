@@ -1,4 +1,4 @@
-package components;
+package carParts;
 
 public interface IFix {
 
